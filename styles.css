@@ -89,7 +89,7 @@ nav {
 .navbar .dropdown>ul a:hover {
 	background-color: grey;
 }
-.navbar .dropdown>a:after {
+/*.navbar .dropdown>a:after {
 	content: "\f0d8";
 	font-family: "Font Awesome 5 Free";
 	font-weight: 900;
@@ -102,7 +102,7 @@ nav {
 	font-weight: 900;
 	position: absolute;
 	right: 0;
-}
+}*/
 footer {
 	list-style-type: none;
 	text-decoration: none;
@@ -133,8 +133,10 @@ li {
 		width: 200px;
 	}
 	
+	
 }
 	
+
 
 /* end header*/
 
@@ -174,18 +176,23 @@ li {
 	  display: flex;
 	  justify-content: flex-end;
 	  align-items: flex-start;
+	  color: black;
 }
 
-.footer .footer-social-media-icons {
-	        display: flex;
-	       flex-flow: row;
-	       justify-content: space-between;
-	       align-items: flex-end;
-	       align-content: flex-end;
-	       
-}	       
+.footer-social-media {
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+   content: "\f16d";
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	height: 50px;
+	width: 50px;
+}
 
-
+a {
+	color: black;
+}
 	                 
 @media screen and (max-width: 768px){ 
 	.footer{
@@ -215,19 +222,13 @@ li {
 	      align-items: center;
 	      align-content: flex-start;
 }
-
-   .footer .footer-social-media-icons
-    {     display: flex;
-		  flex-flow: row;
-		  justify-content: flex-end;
-		  align-items: flex-start;
-		  align-content: flex-end;
-          padding: 10px;
-
-	  
-}
 	
 	html {font-size: 10px;}
+	
+	.footer-social-media {
+		display: flex;
+		flex-flow: column;
+	}
 }
 	
 @media screen and (max-width: 1080px){
@@ -250,14 +251,6 @@ li {
 	    align-content: flex-start;
 	    padding: 10px;}
 
-   .footer .footer-social-media-icons
-    {     display: flex;
-		  flex-flow: row;
-		  justify-content: flex-end;
-		  align-items: flex-start;
-		  align-content: flex-end;
-          padding: 10px;
-}
 	html {font-size: 15px;}
 }
 
@@ -724,3 +717,59 @@ li {
         }
 
 /* End of Article Component */
+
+/* Form Styles*/
+fieldset {
+	border: 1px solid var(--primary-color);
+	margin-bottom: 1.25rem;
+}
+
+fieldset legend {
+	color: var(--primary-color);
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 0.8rem;
+	letter-spacing:  0.015rem;
+}
+.form-group {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-content: flex-start;
+	align-items: flex-start;
+	margin-bottom: 1.25rem;
+}
+
+label {
+	font-weight: bold;
+	flex: 0 0 10rem;
+	
+}
+
+.form-control {
+	 flex: 0 0 calc(100% - 10rem);
+}
+
+.form-control input [type='text'],
+.form-control input [type='email'],
+.form-control input [type='number'],
+.form-control textarea {
+	font-size: inherit;
+	color: inherit;
+	line-height: inherit;
+	width: 100%;
+	max-width: 100%;
+	border: 1px solid var(--black);
+}
+
+.form-control textarea {
+	min-height: 5rem;
+}
+
+input {
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+}
+
+/* End of Form Styles*/
